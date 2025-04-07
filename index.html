@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <!-- Global Tab Navigation -->
+  <!-- Tab Navigation -->
   <nav class="tabs">
     <button id="water-tab-btn" class="tab-btn active" data-app="water">
       <i class="material-icons">opacity</i> Water
@@ -32,21 +32,13 @@
     </button>
   </nav>
 
-  <!-- Protein Tracker App -->
+  <!-- Protein Tracker -->
   <section id="protein-app" class="app-container protein-app">
     <div class="container">
-      <button class="settings-btn" id="protein-settings-toggle">
-        <i class="material-icons">settings</i>
-      </button>
-      <button class="history-btn" id="protein-history-toggle">
-        <i class="material-icons">history</i>
-      </button>
+      <button class="settings-btn" id="protein-settings-toggle"><i class="material-icons">settings</i></button>
+      <button class="history-btn" id="protein-history-toggle"><i class="material-icons">history</i></button>
       <h1>Protein Intake Tracker</h1>
-
-      <div class="progress-container">
-        <div class="progress-bar" id="protein-progress-bar"></div>
-      </div>
-
+      <div class="progress-container"><div class="progress-bar" id="protein-progress-bar"></div></div>
       <h2>Total Today: <span id="protein-total">0</span> g</h2>
       <h2>Remaining: <span id="protein-remaining">0</span> g</h2>
 
@@ -56,9 +48,7 @@
         <button data-action="protein-add" data-amount="20">+20g</button>
         <input type="number" id="protein-manual" placeholder="Custom amount" />
         <button id="protein-add-manual">Add Custom</button>
-        <button id="protein-reset-daily" class="daily-reset-btn">
-          <i class="material-icons">refresh</i> Reset Today
-        </button>
+        <button id="protein-reset-daily" class="daily-reset-btn"><i class="material-icons">refresh</i> Reset Today</button>
       </div>
     </div>
 
@@ -71,12 +61,12 @@
       <label for="protein-reminder-time">Set Reminder Interval:</label>
       <input type="number" id="protein-reminder-time" placeholder="Minutes between reminders" />
       <button id="protein-set-reminder">Set Reminder</button>
-      <button id="protein-enable-notifications">
-        <i class="material-icons">notifications</i> Enable Notifications
-      </button>
-      <button id="protein-reset-data" class="reset-btn">
-        <i class="material-icons">delete</i> Reset All Data
-      </button>
+
+      <button id="protein-enable-notifications"><i class="material-icons">notifications</i> Enable Notifications</button>
+      <button id="protein-test-notification"><i class="material-icons">notifications_active</i> Test Notification</button>
+      <button id="protein-show-playerid"><i class="material-icons">person</i> Show Player ID</button>
+
+      <button id="protein-reset-data" class="reset-btn"><i class="material-icons">delete</i> Reset All Data</button>
     </div>
 
     <div class="history-popup" id="protein-history-popup">
@@ -89,21 +79,13 @@
     </div>
   </section>
 
-  <!-- Water Tracker App -->
+  <!-- Water Tracker -->
   <section id="water-app" class="app-container water-app active">
     <div class="container">
-      <button class="settings-btn" id="water-settings-toggle">
-        <i class="material-icons">settings</i>
-      </button>
-      <button class="history-btn" id="water-history-toggle">
-        <i class="material-icons">history</i>
-      </button>
+      <button class="settings-btn" id="water-settings-toggle"><i class="material-icons">settings</i></button>
+      <button class="history-btn" id="water-history-toggle"><i class="material-icons">history</i></button>
       <h1>Water Intake Tracker</h1>
-
-      <div class="progress-container">
-        <div class="progress-bar" id="water-progress-bar"></div>
-      </div>
-
+      <div class="progress-container"><div class="progress-bar" id="water-progress-bar"></div></div>
       <h2>Total Today: <span id="water-total">0</span> ml</h2>
       <h2>Remaining: <span id="water-remaining">0</span> ml</h2>
 
@@ -113,9 +95,7 @@
         <button data-action="water-add" data-amount="500">+500ml</button>
         <input type="number" id="water-manual" placeholder="Custom amount" />
         <button id="water-add-manual">Add Custom</button>
-        <button id="water-reset-daily" class="daily-reset-btn">
-          <i class="material-icons">refresh</i> Reset Today
-        </button>
+        <button id="water-reset-daily" class="daily-reset-btn"><i class="material-icons">refresh</i> Reset Today</button>
       </div>
     </div>
 
@@ -128,12 +108,12 @@
       <label for="water-reminder-time">Set Reminder Interval:</label>
       <input type="number" id="water-reminder-time" placeholder="Minutes between reminders" />
       <button id="water-set-reminder">Set Reminder</button>
-      <button id="water-enable-notifications">
-        <i class="material-icons">notifications</i> Enable Notifications
-      </button>
-      <button id="water-reset-data" class="reset-btn">
-        <i class="material-icons">delete</i> Reset All Data
-      </button>
+
+      <button id="water-enable-notifications"><i class="material-icons">notifications</i> Enable Notifications</button>
+      <button id="water-test-notification"><i class="material-icons">notifications_active</i> Test Notification</button>
+      <button id="water-show-playerid"><i class="material-icons">person</i> Show Player ID</button>
+
+      <button id="water-reset-data" class="reset-btn"><i class="material-icons">delete</i> Reset All Data</button>
     </div>
 
     <div class="history-popup" id="water-history-popup">
@@ -146,7 +126,7 @@
     </div>
   </section>
 
-  <!-- ✅ OneSignal Integration -->
+  <!-- OneSignal SDK -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
     window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -175,7 +155,7 @@
     });
   </script>
 
-  <!-- ✅ Main Logic -->
+  <!-- Main Logic -->
   <script src="script.js"></script>
 </body>
 </html>
